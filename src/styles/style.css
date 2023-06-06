@@ -110,7 +110,7 @@ JUMBOTRON
   min-height: 400px;
   width: 100%;
   text-align: center;
-  background-image: url("./../../dist/images/hero-image_2-large.jpg");
+  background-image: url("/images/hero-image_2-small.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -121,13 +121,13 @@ JUMBOTRON
     (min-resolution: 192dpi) {
         .jumbotron {
             background-repeat: repeat;
-            background-image: url("./../../dist/images/hero-image_2-small.jpg");
+            background-image: url("/images/hero-image_2-small.jpg");
         }
 }
 @media
 (min-width: 800px) {
     .jumbotron {
-        background-image: url("./../../dist/images/hero-image_2-large.jpg");
+        background-image: url("/images/hero-image_2-large.jpg");
     }
 }
 
@@ -155,7 +155,8 @@ JUMBOTRON
 
 main {
   flex: 1;
-
+  min-height: 100vh;
+}
 
 .content {
   padding: 32px;
@@ -168,7 +169,6 @@ main {
   text-align: center;
   color: #617A55;
 }
-
 
 /*
   Restos

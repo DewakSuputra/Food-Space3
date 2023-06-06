@@ -22,9 +22,7 @@ const restoDetailTemplate = (resto) => {
 
   const htmlStr = `
     <h2 tabindex="0" class="resto__title">${resto.name}</h2>
-    <img  tabindex="0" class="resto__poster" crossorigin="anonymous" data-src="${
-  CONFIG.BASE_IMAGE_URL + resto.pictureId
-}" alt="${resto.name}" />
+    <img  tabindex="0" class="resto__poster" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" />
     <div class="content__detail">
       <div class="resto__info">
           <h3 tabindex="0">Information</h3>

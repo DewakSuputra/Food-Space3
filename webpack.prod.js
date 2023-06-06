@@ -1,3 +1,4 @@
+/* eslint-disable prefer-regex-literals */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-unused-vars */
 const { merge } = require('webpack-merge');
@@ -49,7 +50,21 @@ module.exports = merge(common, {
   },
   plugins: [
     new WorkboxWebpackPlugin.GenerateSW({
-      swDest: './service-worker.bundle.js',
+      swDest: './sw.bundle.js',
+      skipWaiting: true,
+      clientsClaim: true,
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('^https://restaurant-api.dicoding.dev/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'SpaceFood-V1',
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          },
+        },
+      ],
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',

@@ -27,4 +27,5 @@ Scenario('unliking one favorite resto', async ({ I }) => {
   I.click('#likeButton');
 
   I.amOnPage('/#/favorite');
+  I.dontSeeElement('.resto__title');
 });

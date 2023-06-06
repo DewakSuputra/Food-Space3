@@ -7,7 +7,6 @@ const ImageminMozjpeg = require('imagemin-mozjpeg');
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
-    sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   performance: {
     hints: false,
@@ -27,6 +26,7 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+            options: { url: false },
           },
         ],
       },
